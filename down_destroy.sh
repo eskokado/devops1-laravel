@@ -2,7 +2,7 @@
 
 docker-compose down -v;
 
-docker volume prune --filter label=yuri.project.name=laravel_app -f;
+docker volume prune --filter label=eskokado.project.name=laravel_app -f;
 rm -R .docker/mysql/data/*
 
 #sudo chmod a+rw -R .;

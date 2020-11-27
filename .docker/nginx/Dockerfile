@@ -1,7 +1,7 @@
 #@version 3.7.5
 
 FROM nginx:1.19.1-alpine
-MAINTAINER Yuri Koster <yurikoster1@gmail.com>
+MAINTAINER Edson Shideki Kokado  <eskokado@gmail.com>
 
 EXPOSE 80
 EXPOSE 443

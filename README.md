@@ -4,7 +4,7 @@ Repository made for Course on https://code.education/cursos-online/
 DevOps module, Docker unit, Exercise 1 of http://lancamento.fullcycle.com.br/
 
 ## Image Link for the exercise
-https://hub.docker.com/repository/docker/yurikoster1/devops1_laravel
+https://hub.docker.com/repository/docker/eskokado/devops1_laravel
 
 ## Containers
 This repository contains a docker-compose file that runs the following containers
@@ -53,11 +53,11 @@ The `docker` user is added at runtime and used in the laravel configuration to a
 This container uses the `redis:alpine` image without modification
 
 ## Labels
-All containers, volumes and networks created by this repository have the `yuri.project.name` label with its value being derived from the `.env` file used by the `docker-compose.yml` file located in the root of this repository.
+All containers, volumes and networks created by this repository have the `eskokado.project.name` label with its value being derived from the `.env` file used by the `docker-compose.yml` file located in the root of this repository.
 
 ## Down & Destory script
 On the root of this repository there is a bash script that is used to facilitate the return of the containers to their initial state.
-This script will run the `docker-compose down -v` command followed by `docker volume prune --filter label=yuri.project.name=laravel_app -f` to insure all containers, networks and volumes are deleted.
+This script will run the `docker-compose down -v` command followed by `docker volume prune --filter label=eskokado.project.name=laravel_app -f` to insure all containers, networks and volumes are deleted.
 Then it will remove all data from the `.docker/mysql/data` folder deleting the MySQL database.
 Finally, it will remove all log files from laravel and the  ` "CONTAINER_ALREADY_RAN_ONCE"` file to force the laravel container entry point script to re-run all tasks.
 It will however *not* delete the vendor folder used by composer or the `.env` file or the cache files created by laravel itself.

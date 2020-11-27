@@ -27,7 +27,7 @@ services:
       - DB_PORT=${DB_PORT}
       - REDIS_HOST=${REDIS_HOST}
     labels:
-      yuri.project.name: ${COMPOSE_PROJECT_NAME}
+      eskokado.project.name: ${COMPOSE_PROJECT_NAME}
 
   #NIGNX
   devops_1_nginx:
@@ -53,7 +53,7 @@ services:
     - PHP_SERVICE_NAME=${PHP_SERVICE_NAME}
     - PHP_SERVICE_PORT=${PHP_SERVICE_PORT}
     labels:
-      yuri.project.name: ${COMPOSE_PROJECT_NAME}
+      eskokado.project.name: ${COMPOSE_PROJECT_NAME}
 
 
 
@@ -82,7 +82,7 @@ services:
       test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
       timeout: 20s
     labels:
-      yuri.project.name: ${COMPOSE_PROJECT_NAME}
+      eskokado.project.name: ${COMPOSE_PROJECT_NAME}
 
   #REDIS
   devops_1_app-redis:
@@ -95,10 +95,10 @@ services:
     expose:
       - 6379
     labels:
-      yuri.project.name: ${COMPOSE_PROJECT_NAME}
+      eskokado.project.name: ${COMPOSE_PROJECT_NAME}
 
 networks:
   devops_1_app-network:
     driver: bridge
     labels:
-     yuri.project.name: ${COMPOSE_PROJECT_NAME}
+     eskokado.project.name: ${COMPOSE_PROJECT_NAME}
